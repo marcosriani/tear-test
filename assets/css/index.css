@@ -1,0 +1,236 @@
+@import url('global.css');
+
+@font-face {
+  font-family: 'FSMeWeb-Regular';
+  src: url('../fonts/FSMeWeb-Regular_rcfffc.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FSMeWeb-Bold';
+  src: url('../fonts/FSMeWeb-Bold_ce2eoa.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'FSMeWeb-Regular', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'FSMeWeb-Bold', sans-serif;
+}
+
+.main {
+  background-image: url('../images/WhereYourMoneyGoes-Desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 5%;
+}
+
+.article {
+  width: 62.4rem;
+  height: 68.3rem;
+  padding: 5.6rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background-color: #fff;
+  color: #333;
+  overflow: hidden;
+}
+
+.article__title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.2rem;
+}
+
+.article__bar {
+  width: 6.4rem;
+  border: 3px solid #008caa;
+}
+
+.article__paragraph,
+.article__paragraph-bold {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.article__paragraph {
+  font-weight: 400;
+}
+
+.article__paragraph-bold {
+  font-weight: 700;
+}
+
+.donation-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons-group__item {
+  width: 100%;
+  height: 6.4rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons-group__item:nth-child(1) {
+  background-color: #6f3f87;
+}
+
+.buttons-group__item:nth-child(1):hover {
+  background-color: rgb(161, 85, 199);
+}
+
+.buttons-group__item:nth-child(2) {
+  background-color: #173145;
+}
+
+.buttons-group__item:nth-child(2):hover {
+  background-color: #1a537f;
+}
+
+.description {
+  height: 100%;
+  position: relative;
+}
+
+.description__item {
+  height: 100%;
+  background-color: #6f3f87;
+  color: #fff;
+  border-radius: 1rem;
+  font-weight: 700;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description__item-triangle-purple {
+  position: absolute;
+  top: -1.1rem;
+  left: 22%;
+  width: 2rem;
+  height: 1.5rem;
+  background-image: url('../images/triangle-purple.svg');
+  background-repeat: no-repeat;
+}
+
+.description__item-triangle-blue {
+  position: absolute;
+  top: -1.1rem;
+  left: 73%;
+  width: 2rem;
+  height: 1.5rem;
+  background-image: url('../images/triangle-blue.svg');
+  background-repeat: no-repeat;
+}
+
+.description__item-title {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+}
+
+.description__item-paragraph {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-family: 'FSMeWeb-Bold', sans-serif;
+}
+
+.description__item:nth-child(2) {
+  display: none;
+  background-color: #173145;
+}
+
+/* Tablet-specific styles go here */
+@media (max-width: 768px) {
+  .article {
+    width: 46.4rem;
+    height: 56.7rem;
+    padding: 3.6rem;
+    gap: 2rem;
+  }
+
+  .article__title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .article__bar {
+    width: 4.8rem;
+    border: 2px solid #008caa;
+  }
+
+  .article__paragraph,
+  .article__paragraph-bold {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+
+  .buttons-group__item {
+    height: 4.8rem;
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+
+  .description__item {
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+
+  .description__item-paragraph {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+/* Mobile-specific styles go here */
+@media (max-width: 480px) {
+  .main {
+    background-image: url('../images/WhereYourMoneyGoes-Mobile.png');
+    padding-right: 0;
+    padding-bottom: 5%;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .article {
+    width: 32.7rem;
+    height: 66.9rem;
+    padding: 2.6rem;
+    gap: 2rem;
+  }
+
+  .buttons-group__item {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+
+  .description__item {
+    padding: 2rem;
+  }
+}
